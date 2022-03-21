@@ -20,7 +20,8 @@ pipeline {
                     sh 'docker build -t nodeimage .'
                 }
             }
-        } stage('Push Docker Image') {
+        } 
+        stage('Push Docker Image') {
             steps {
                 script {
                     withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerpwd')]) {
