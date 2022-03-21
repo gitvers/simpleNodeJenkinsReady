@@ -17,7 +17,7 @@ pipeline {
         stage ('Build Docker Image') {
             steps {
                 script{
-                    sh 'docker build -t patel244/nodeimage .'
+                    sh 'docker build -t nodeimage .'
                 }
             }
         } 
