@@ -20,7 +20,7 @@ pipeline {
                  //   sh 'docker build -t nodeimage .'
                 }
             }
-        } 
+       // } 
        // stage('Push Docker Image') {
            // steps {
                // script {
