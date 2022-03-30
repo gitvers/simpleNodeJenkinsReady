@@ -26,7 +26,7 @@ pipeline {
                // script {
                   //  withCredentials([string(credentialsId: 'dockerpwd', variable: 'dockerpwd')]) {
                   //  sh 'docker login -u patel244 -p ${dockerpwd}'
-}
+// }
                     
                    // sh 'docker push patel244/nodeimage '
                 }
