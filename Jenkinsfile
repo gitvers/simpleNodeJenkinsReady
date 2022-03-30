@@ -29,7 +29,7 @@ pipeline {
 // }
                     
                    // sh 'docker push patel244/nodeimage '
-                }
+               // }
             }
         }
 
