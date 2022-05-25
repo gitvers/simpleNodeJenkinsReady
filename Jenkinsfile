@@ -9,7 +9,7 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/gitvers/simpleNodeJenkinsReady.git']]])
                 sh 'npm install'
              
-                sh 'tar czf Node.tar.gz node_modules app.js package.json' 
+                sh 'tar czf Node.tar.gz node_modules app.js test.js package.json' 
                 
                 
             }
@@ -18,7 +18,7 @@ pipeline {
         stage ('Build Docker Image') {
             steps {
                 script{
-                    sh 'docker build -t nodeimage .'
+                    sh 'docker build -t patel244/nodedemo .'
                 }
             }
         } 
@@ -29,7 +29,7 @@ pipeline {
                     sh 'docker login -u patel244 -p ${dockerpwd}'
  }
                     
-                    sh 'docker push patel244/nodeimage '
+                    sh 'docker push patel244/nodedemo '
                 }
             }
         }
