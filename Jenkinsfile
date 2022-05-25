@@ -9,7 +9,7 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/master']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/gitvers/simpleNodeJenkinsReady.git']]])
                 sh 'npm install'
              
-                sh 'tar czf Node.tar.gz node_modules app.js test.js package.json' 
+                sh 'tar czf Node.tar.gz node_modules app.js  package.json' 
                 
                 
             }
